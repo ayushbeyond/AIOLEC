@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /default.php
+
+Sitemap: https://www.aiolec.com/sitemap.xml
