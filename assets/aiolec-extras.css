@@ -1,0 +1,116 @@
+/* AIOLEC — shared product content blocks (gallery, mounting, connections, cooling, CMS, kiosk, outdoor) */
+.ax-section{padding:120px 0;border-top:1px solid #efeeec;background:#fff}
+.ax-section.soft{background:var(--soft,#f6f5f3)}
+.ax-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:42px}
+.ax-head h2{margin:0;font-size:clamp(44px,5.4vw,74px);font-weight:400;line-height:.94;letter-spacing:-.06em}
+.ax-head p{max-width:440px;margin:0;color:var(--muted,#75767b);font-size:16px;line-height:1.6}
+
+/* Gallery */
+.ax-gallery{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:14px;height:min(72vw,760px)}
+.ax-gallery figure{position:relative;margin:0;overflow:hidden;border-radius:28px;background:#eceae6}
+.ax-gallery figure:first-child{grid-row:span 2}
+.ax-gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s var(--ease,cubic-bezier(.16,1,.3,1))}
+.ax-gallery figure:hover img{transform:scale(1.035)}
+.ax-gallery figcaption{position:absolute;left:18px;bottom:18px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:12px;font-weight:500;color:var(--ink,#111214)}
+.ax-gallery.three{grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:1fr;height:min(46vw,560px)}
+.ax-gallery.three figure:first-child{grid-row:auto}
+
+/* Card grid (mounting, CMS capabilities, protection) */
+.ax-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ax-cards.c3{grid-template-columns:repeat(3,1fr)}
+.ax-cards.c5{grid-template-columns:repeat(5,1fr)}
+.ax-card{background:#fff;border:1px solid var(--line,#e8e7e5);border-radius:26px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:14px;transition:transform .5s var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow .5s var(--ease,cubic-bezier(.16,1,.3,1))}
+.ax-card:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(17,18,20,.07)}
+.ax-section.soft .ax-card{background:#fff}
+.ax-card svg{width:58px;height:58px;color:var(--ink,#111214)}
+.ax-card h3{margin:0;font-size:20px;font-weight:500;letter-spacing:-.03em}
+.ax-card p{margin:0;color:var(--muted,#75767b);font-size:14px;line-height:1.55}
+.ax-card .ax-num{font-size:11px;font-weight:600;letter-spacing:.14em;color:#9a9b9f}
+.ax-note{margin:18px 0 0;font-size:12px;color:#8a8b8f}
+
+/* Split layout */
+.ax-split{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:stretch}
+.ax-panel{border-radius:28px;overflow:hidden;background:#111214;color:#fff;position:relative;min-height:360px}
+.ax-panel img{width:100%;height:100%;object-fit:cover;display:block}
+.ax-panel.light{background:#fff;color:var(--ink,#111214);border:1px solid var(--line,#e8e7e5)}
+.ax-list{background:#fff;border:1px solid var(--line,#e8e7e5);border-radius:28px;padding:30px}
+.ax-list h3{margin:0 0 18px;font-size:22px;font-weight:500;letter-spacing:-.03em}
+.ax-row{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid #efeeec;font-size:14px}
+.ax-row:last-child{border-bottom:0}
+.ax-row span:first-child{color:#75767b}
+.ax-row span:last-child{text-align:right;font-weight:500}
+.ax-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ax-chip{padding:9px 14px;border-radius:999px;border:1px solid #e1e0dd;background:#faf9f7;font-size:13px;font-weight:500}
+
+/* Cooling timeline */
+.ax-thermal{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line,#e8e7e5);border-radius:28px;overflow:hidden;background:#fff}
+.ax-thermal div{padding:30px 28px;position:relative}
+.ax-thermal div+div{border-left:1px solid #efeeec}
+.ax-thermal strong{display:block;font-size:clamp(40px,4.6vw,64px);font-weight:400;letter-spacing:-.06em;line-height:1}
+.ax-thermal span{display:block;margin-top:12px;font-size:14px;color:#75767b;line-height:1.5}
+.ax-thermal .bar{position:absolute;left:28px;right:28px;top:0;height:3px;border-radius:3px}
+.ax-thermal div:nth-child(1) .bar{background:#f2b04a}
+.ax-thermal div:nth-child(2) .bar{background:#e4572e}
+.ax-thermal div:nth-child(3) .bar{background:#3d9be9}
+
+/* CMS flow */
+.ax-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:14px;margin-bottom:14px}
+.ax-flow-step{background:#fff;border:1px solid var(--line,#e8e7e5);border-radius:26px;padding:28px 24px;text-align:center}
+.ax-flow-step svg{width:72px;height:72px;margin:0 auto 14px;display:block}
+.ax-flow-step h3{margin:0 0 6px;font-size:18px;font-weight:500;letter-spacing:-.02em}
+.ax-flow-step p{margin:0;font-size:13px;color:#75767b;line-height:1.5}
+.ax-flow-arrow{width:44px;height:2px;background:linear-gradient(90deg,#d9d8d4,#111214);position:relative}
+.ax-flow-arrow::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:7px solid #111214;border-right:0}
+.ax-flow-arrow i{position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:#111214;animation:axPulse 2.4s infinite linear}
+@keyframes axPulse{0%{left:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{left:40px;opacity:0}}
+
+/* Kiosk / product feature block */
+.ax-feature{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+.ax-feature .ax-panel{min-height:520px}
+.ax-feature-copy{background:#fff;border:1px solid var(--line,#e8e7e5);border-radius:28px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.ax-feature-copy h3{margin:0;font-size:clamp(34px,3.6vw,52px);font-weight:400;letter-spacing:-.055em;line-height:.98}
+.ax-feature-copy p{margin:14px 0 0;color:#75767b;font-size:15px;line-height:1.6}
+.ax-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#ecebe8;border-radius:20px;overflow:hidden}
+.ax-stats div{background:#faf9f7;padding:18px}
+.ax-stats b{display:block;font-size:22px;font-weight:500;letter-spacing:-.03em}
+.ax-stats span{font-size:12px;color:#75767b}
+.ax-table-wrap{overflow-x:auto;border:1px solid #e4e3df;border-radius:28px;background:#fff;margin-top:18px}
+.ax-table{width:100%;min-width:760px;border-collapse:collapse}
+.ax-table th,.ax-table td{padding:15px 18px;text-align:left;border-bottom:1px solid #ecebe8;font-size:13px}
+.ax-table thead th{font-weight:600;color:#7b7c81;background:#faf9f7}
+.ax-table tbody th{font-weight:600;color:#73747a}
+.ax-table tr:last-child th,.ax-table tr:last-child td{border-bottom:0}
+.ax-tag{display:inline-block;padding:6px 11px;border-radius:999px;background:#111214;color:#fff;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+
+@media(max-width:1000px){
+  .ax-head{flex-direction:column;align-items:flex-start;gap:16px}
+  .ax-cards,.ax-cards.c5{grid-template-columns:repeat(2,1fr)}
+  .ax-cards.c3{grid-template-columns:1fr 1fr}
+  .ax-split,.ax-feature{grid-template-columns:1fr}
+  .ax-flow{grid-template-columns:1fr;justify-items:stretch}
+  .ax-flow-arrow{width:2px;height:28px;margin:0 auto;background:linear-gradient(180deg,#d9d8d4,#111214)}
+  .ax-flow-arrow::after{right:-4px;top:auto;bottom:-1px;border:5px solid transparent;border-top:7px solid #111214;border-bottom:0}
+  .ax-flow-arrow i{display:none}
+  .ax-gallery,.ax-gallery.three{grid-template-columns:1fr 1fr;grid-template-rows:auto;height:auto}
+  .ax-gallery figure{aspect-ratio:4/3}
+  .ax-gallery figure:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10}
+}
+@media(max-width:700px){
+  .ax-section{padding:84px 0}
+  .ax-cards,.ax-cards.c3,.ax-cards.c5{grid-template-columns:1fr}
+  .ax-thermal{grid-template-columns:1fr}
+  .ax-thermal div+div{border-left:0;border-top:1px solid #efeeec}
+  .ax-gallery,.ax-gallery.three{grid-template-columns:1fr}
+  .ax-feature-copy{padding:28px}
+  .ax-feature .ax-panel{min-height:380px}
+}
+@media(prefers-reduced-motion:reduce){.ax-flow-arrow i{animation:none}.ax-gallery img{transition:none}}
+
+/* Nav: fifth mobile link (Outdoor added) */
+body.nav-open .mobile-nav-inner a:nth-child(5){transition-delay:.32s}
+/* Homepage: four product cards */
+@media(min-width:1201px){#products .product-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:20px!important}}
+@media(min-width:701px) and (max-width:1200px){#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:none!important}}
+.product-grid .reveal:nth-child(4){transition-delay:.22s}
+.product-card .card-image-wrapper.ax-photo{padding:0!important}
+.product-card .card-image-wrapper.ax-photo img{width:100%;height:100%;object-fit:cover}

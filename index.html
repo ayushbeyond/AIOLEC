@@ -1925,6 +1925,7 @@ body.nav-open{overflow:hidden}
 }
 </style>
 
+<link rel="stylesheet" href="assets/aiolec-extras.css">
 </head>
 <body>
 
@@ -1939,6 +1940,7 @@ body.nav-open{overflow:hidden}
       <a href="cd.html">Commercial</a>
       <a href="hbv.html">High Brightness</a>
       <a href="dsv1.html">Double Side</a>
+      <a href="odv1.html">Outdoor</a>
     </nav>
     <a class="header-cta" href="#enquire">Enquire Now <span>→</span></a>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -1952,6 +1954,7 @@ body.nav-open{overflow:hidden}
     <a href="cd.html">Commercial</a>
     <a href="hbv.html">High Brightness</a>
     <a href="dsv1.html">Double Side</a>
+      <a href="odv1.html">Outdoor</a>
     <a class="mobile-nav-cta" href="#enquire">Enquire Now <span>→</span></a>
   </div>
 </div>
@@ -2196,6 +2199,26 @@ body.nav-open{overflow:hidden}
                     </div>
                 </div>
 
+                <div class="product-card card-side reveal">
+                    <a href="odv1.html" class="card-image-link">
+                        <div class="card-image-wrapper ax-photo">
+                            <img src="assets/od-street-kiosk.webp" alt="Outdoor IP66 Display" class="card-img" loading="lazy" decoding="async">
+                        </div>
+                    </a>
+                    <div class="card-text-wrapper">
+                        <p class="card-eyebrow">AI-SERIES OD1</p>
+                        <h3 class="card-title">Outdoor IP66</h3>
+                        <div class="specs-pills">
+                            <span class="spec-pill">3000 nits</span>
+                            <span class="spec-pill">IP66</span>
+                            <span class="spec-pill">IK08</span>
+                        </div>
+                        <hr class="card-divider">
+                        <p class="card-desc">The OD1 is a 3000-nit outdoor display in a sleek wall enclosure, sealed to IP66 and built for 24/7 operation from -20°C to 60°C.</p>
+                        <a href="odv1.html" class="card-cta"><span>see full specs</span><i aria-hidden="true">&rarr;</i></a>
+                    </div>
+                </div>
+
             </div>
         </section>
 <section id="aiolec-advisor" class="theme-dark" aria-label="AIOLEC Display Advisor">
@@ -2398,7 +2421,7 @@ body.nav-open{overflow:hidden}
 
     function recommend(){
       const a=state.answers;
-      const s={HB:0,CD:0,DS:0};
+      const s={HB:0,CD:0,DS:0,OD:0};
       if(a.env==='outdoor') s.HB+=9;
       if(a.env==='transitional'){s.HB+=3;s.DS+=3;s.CD+=1;}
       if(a.env==='indoor') s.CD+=6;
@@ -2414,11 +2437,12 @@ body.nav-open{overflow:hidden}
       if(['free','totem'].includes(a.inst)) s.DS+=5;
       if(a.space>=20000){s.HB+=2;s.DS+=2;}
       let winner=Object.entries(s).sort((x,y)=>y[1]-x[1])[0][0];
-      if(a.dir==='two') winner='DS';
-      else if(a.env==='outdoor' && a.light==='sun') winner='HB';
+      if(a.env==='outdoor') winner='OD';
+      else if(a.dir==='two') winner='DS';
 
       const product={
         CD:{title:'Commercial<br>Display',img:'assets/commercial-display.webp',link:'cd.html',copy:'Your inputs point to a balanced commercial display for an indoor, primarily single-direction installation.',reasons:['Indoor commercial environment','Retail, QSR, corporate or hospitality use','Single-direction viewing','Strong fit for wall-mounted installations']},
+        OD:{title:'Outdoor IP66<br>Display',img:'assets/od-street-kiosk.webp',link:'odv1.html',copy:'Your display will live outside. The Outdoor IP66 range is the strongest starting point, with a sealed enclosure, 3,000-nit brightness and protection from rain, dust and impact.',reasons:['Fully outdoor installation','IP66 weather protection','Sunlight-readable 3,000 nits','Rated from -20°C to 60°C']},
         HB:{title:'High Brightness<br>Display',img:'assets/high-brightness-display.webp',link:'hbv.html',copy:'Your environment puts visibility first. High Brightness is the strongest starting point where ambient light, outdoor exposure or direct sun is the challenge.',reasons:['Bright or direct-light environment','Higher visibility requirement','Outdoor or public-facing use','Built around difficult ambient-light conditions']},
         DS:{title:'Double Sided<br>Display',img:'assets/double-sided-display.webp',link:'dsv1.html',copy:'Your space needs communication in both directions. Double Sided is the strongest starting point where people approach from opposite sides.',reasons:['Two-direction viewing','Traffic-facing placement','Freestanding or central installation','More reach without doubling the footprint']}
       }[winner];
@@ -2559,6 +2583,7 @@ body.nav-open{overflow:hidden}
       <a href="cd.html">Commercial</a>
       <a href="hbv.html">High Brightness</a>
       <a href="dsv1.html">Double Side</a>
+      <a href="odv1.html">Outdoor</a>
       <a href="#products">Products</a>
     </nav></div>
     <div class="footer-contact"><div class="footer-label">Contact</div>
